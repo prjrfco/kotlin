@@ -5,11 +5,17 @@ volume = (4.0/3.0)*pi*raio 2 .*/
 
 
 fun main() {
+    print("Raio da esfera: ")
 
-    println(volumeEsfera(4.0))
+    val doubleInput = readLine()!!.toString().toDoubleOrNull()
+
+    println("Volume da esfera: " + volumeEsfera(doubleInput))
 }
 
-fun volumeEsfera(raio: Double):Double {
-    val pi: Double = 3.14159
-    return (4.0 / 3.0) * pi * raio
+fun volumeEsfera(raio: Double? = null): Double? {
+    if(raio != null){
+        val pi: Double = 3.14159
+        return (4.0 / 3.0) * pi * raio
+    }
+    return null
 }
