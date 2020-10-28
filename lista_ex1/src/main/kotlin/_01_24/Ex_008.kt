@@ -19,9 +19,9 @@ fun porExtenso(numeroDig: Int): String {
 
     val numeroString = numeroDig.toString()
 
-    for (i in 0 .. numeroString.length-1){
+    for (i in 0..numeroString.length - 1) {
         var n = Character.getNumericValue(numeroString[i])
-        result += numeros[n]+" "
+        result += numeros[n] + " "
     }
     return result
 }
