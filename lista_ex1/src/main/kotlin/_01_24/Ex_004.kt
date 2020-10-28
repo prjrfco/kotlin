@@ -14,11 +14,12 @@ fun main() {
     print("Entre 1 e : ")
     var numero = readLine()!!.toString().toInt()
 
-    aleatorio(qtd, numero)
+    aleatorio(qtd,1, numero)
 
 }
 
-fun aleatorio(qtd:Int, numero:Int) {
-    val randomValues = List(qtd) { Random.nextInt(1, numero) }
+fun aleatorio(qtd:Int, min:Int, max:Int): List<Int> {
+    val randomValues = List(qtd) { Random.nextInt(min, max) }
     println(randomValues)
+    return randomValues
 }
