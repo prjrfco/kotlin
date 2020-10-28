@@ -3,8 +3,14 @@ package _01_24
 /*Construa uma função que verifique, sem utilizar a função mod, se um número é divisível por outro.*/
 
 fun main() {
-    print(podeDividirSemMod(7,2))
-    print(podeDividirSemMod(6,2))
+
+    print("Número 1: ")
+    var numero1 = readLine()!!.toString().toInt()
+
+    print("Número 2: ")
+    var numero2 = readLine()!!.toString().toInt()
+
+    print(podeDividirSemMod(numero1, numero2))
 
 }
 
