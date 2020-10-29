@@ -28,7 +28,13 @@ fun main() {
     val ano2 = splitedDate2[2].toInt()
     val dias2: Int = (ano2 * 365) + (mes2 * 30) + dia2
 
-    val intervaloDias: Int = dias2 - dias1
+    val intervaloDias:Int
+
+    if (dias1 > dias2) {
+        intervaloDias = dias1 - dias2
+    }else{
+        intervaloDias = dias2 - dias1
+    }
 
     print("Intervalo: " + (intervaloDias % 365) % 30 + "/" + (intervaloDias % 365) / 30 + "/" + intervaloDias / 365)
 
